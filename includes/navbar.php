@@ -15,9 +15,23 @@
         <li class="nav-item"><a class="nav-link" href="#notices">Notices</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-      <div class="d-flex gap-2">
-        <a href="#" class="btn btn-login">Login</a>
-        <a href="#" class="btn btn-register">Register</a>
+      <div class="d-flex gap-2 align-items-center">
+        <?php if (isLoggedIn()): ?>
+          <div class="dropdown">
+            <button class="btn btn-user dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user-circle me-1"></i><?= e(getUser('name')) ?>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 rounded-3">
+              <li><span class="dropdown-item-text small text-muted"><?= e(getUser('email')) ?></span></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-columns me-2"></i>Dashboard</a></li>
+              <li><a class="dropdown-item text-danger" href="<?= BASE_URL ?>pages/logout.php"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+            </ul>
+          </div>
+        <?php else: ?>
+          <a href="<?= BASE_URL ?>pages/login.php" class="btn btn-login">Login</a>
+          <a href="<?= BASE_URL ?>pages/register.php" class="btn btn-register">Register</a>
+        <?php endif; ?>
       </div>
     </div>
   </div>

@@ -1052,6 +1052,156 @@ img {
   color: var(--primary);
 }
 
+/* ===== AUTH PAGES ===== */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  padding: 100px 0 60px;
+}
+
+.auth-card {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid var(--border);
+  padding: 36px 32px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-header h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+  color: var(--dark);
+}
+
+.auth-header p {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+.auth-card .form-label {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--dark);
+}
+
+.auth-card .form-control {
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  font-family: var(--font);
+  font-size: 0.9rem;
+  transition: all var(--transition);
+}
+
+.auth-card .form-control:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(70, 152, 198, 0.12);
+}
+
+.btn-auth {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  transition: all var(--transition);
+}
+
+.btn-auth:hover {
+  background: var(--secondary-dark);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.auth-footer a {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.auth-card .alert {
+  border-radius: 10px;
+  font-size: 0.85rem;
+  padding: 10px 14px;
+}
+
+/* ===== NAVBAR USER DROPDOWN ===== */
+.btn-user {
+  padding: 7px 18px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  background: rgba(70, 152, 198, 0.08);
+  color: var(--secondary);
+  border: none;
+  transition: all var(--transition);
+}
+
+.btn-user:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.btn-user i {
+  font-size: 1rem;
+}
+
+.dropdown-menu {
+  border-radius: 12px;
+  padding: 8px;
+  margin-top: 8px;
+  min-width: 200px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
+}
+
+.dropdown-menu .dropdown-item {
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  color: var(--dark);
+  transition: all var(--transition);
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background: rgba(70, 152, 198, 0.06);
+  color: var(--secondary);
+}
+
+.dropdown-menu .dropdown-item i {
+  width: 18px;
+}
+
+.dropdown-item-text {
+  font-size: 0.78rem;
+  padding: 4px 14px;
+}
+
+.dropdown-divider {
+  margin: 4px 0;
+}
+
 /* ===== SETUP ALERT (Phase 2 - removable) ===== */
 .setup-alert {
   background: linear-gradient(135deg, var(--secondary), #1a5f8a);
